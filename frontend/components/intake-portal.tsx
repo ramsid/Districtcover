@@ -37,6 +37,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { FileUploadZone } from "@/components/file-upload-zone"
 import type { AcordExtractedData } from "@/lib/types"
+import { PolicyChat } from "@/components/policy-chat"
 
 interface QuoteRecord {
   quoteNo: string
@@ -310,34 +311,8 @@ export function IntakePortal() {
               </CardContent>
             </Card>
 
-            {/* Contact Card */}
-            <Card className="shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-lg font-medium">Contact Us</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3 text-sm">
-                  <span className="text-muted-foreground">1.</span>
-                  <Phone className="w-4 h-4 text-muted-foreground" />
-                  <span>Phone: 615-200-6404</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <span className="text-muted-foreground">2.</span>
-                  <Mail className="w-4 h-4 text-muted-foreground" />
-                  <span>Email: help@districtcover.com</span>
-                </div>
-                <div className="flex items-start gap-3 text-sm">
-                  <span className="text-muted-foreground">3.</span>
-                  <BookOpen className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
-                  <span>Find our Program Guidelines, Eligibility Information, Inspection Process and other useful items in our District Cover Library</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm">
-                  <span className="text-muted-foreground">4.</span>
-                  <HelpCircle className="w-4 h-4 text-muted-foreground" />
-                  <span>FAQs</span>
-                </div>
-              </CardContent>
-            </Card>
+           {/* Policy Chat (replaces Contact card) */}
+            <PolicyChat /> 
           </div>
 
           {/* Latest Quotes Table */}
